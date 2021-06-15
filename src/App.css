@@ -1,4 +1,16 @@
 
 .App{
-    margin: 3rem;
+    margin: 2.5rem;
+}
+
+/* Header */
+.header{
+    display: flex;
+}
+
+
+/*Componets*/
+.components{
+    margin-top: 3rem;
+    margin-bottom: 1rem;
 }

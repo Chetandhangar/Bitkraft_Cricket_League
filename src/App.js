@@ -1,18 +1,24 @@
 import './App.css';
-import  { useState } from 'react'
 import { Countries } from './components/CountriesComponent';
-import { Teams } from './components/TeamsComponent'; 
+import { Teams } from './components/teams/TeamsComponent';
+import {RenderTeamDetails} from './components/teams/TeamDetailsComponent' 
 import { ScoreTable } from './components/ScoreTableComponent';
-import { Players } from './components/PlayersComponent';
+import { Players } from './components/players/PlayersComponent'
+//import { RenderPlayerDetails } from './components/players/PlayerDetailsComponent'
 import { Venues } from './components/VenuesComponent';
-import { Matches } from './components/MatchesComponent' 
-import { Results } from './components/ResultsComponent'
+import { Matches } from './components/MatchesComponent' ;
+import { Results } from './components/ResultsComponent';
+
+import { useTab } from './contexts/tab-context';
+
+
 
 
 
 function App() {
 
-  const[tab,setTab] = useState("countries")
+  const { tab, setTab } = useTab();
+  
 
   function tabHandler(tab){
     setTab(tab);
@@ -20,16 +26,20 @@ function App() {
 
   return (
     <div className="App">
-      <div>
-       <button onClick={() => tabHandler("countries")}>Countries</button>
-       <button onClick={() => tabHandler("teams")}>Teams</button>
-       <button onClick={() => tabHandler("players")}> Players </button>
-       <button onClick={() => tabHandler("venues")}>Venues</button>
-       <button onClick={() => tabHandler("matches")}>Matches</button>
-       <button onClick={() => tabHandler("results")}>Results</button>
-       <button onClick={() => tabHandler("scoretable")}>Score Table</button>
+      <header className="header">
+        <h1 className="league-name">BitKraft Cricket League</h1>
+      <div className="tabs">
+       <button className="btn-tab" onClick={() => tabHandler("countries")}>Countries</button>
+       <button className="btn-tab" onClick={() => tabHandler("teams")}>Teams</button>
+       <button className="btn-tab" onClick={() => tabHandler("players")}> Players </button>
+       <button className="btn-tab" onClick={() => tabHandler("venues")}>Venues</button>
+       <button className="btn-tab" onClick={() => tabHandler("matches")}>Matches</button>
+       <button className="btn-tab" onClick={() => tabHandler("results")}>Results</button>
+       <button className="btn-tab" onClick={() => tabHandler("scoretable")}>Score Table</button>
        </div>
-       <div>
+       </header>
+       
+       <div className="components">
        {
          tab === "countries" && <Countries />
        }
@@ -51,6 +61,10 @@ function App() {
           {
          tab === "scoretable" && <ScoreTable/>
        }
+       {
+         tab === 'team_details' && <RenderTeamDetails />
+       }
+        
        </div>
     </div>
     
