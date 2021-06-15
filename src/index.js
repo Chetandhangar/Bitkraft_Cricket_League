@@ -3,10 +3,19 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { BitkraftProvider } from './contexts/bitkraft-context';
+import { TabProvider } from './contexts/tab-context';
+import { CurrentDetailsProvider} from './contexts/current-context';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <BitkraftProvider>
+      <TabProvider>
+        <CurrentDetailsProvider>
+          <App />
+        </CurrentDetailsProvider>
+      </TabProvider>     
+    </BitkraftProvider>
   </React.StrictMode>,
   document.getElementById('root')
 );
