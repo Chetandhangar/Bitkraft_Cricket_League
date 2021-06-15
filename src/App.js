@@ -27,6 +27,7 @@ function App() {
   return (
     <div className="App">
       <header className="header">
+        Give me one day i will make it more beatiful and everthing proper.
         <h1 className="league-name">BitKraft Cricket League</h1>
       <div className="tabs">
        <button className="btn-tab" onClick={() => tabHandler("countries")}>Countries</button>
