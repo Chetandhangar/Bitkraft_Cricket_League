@@ -20,7 +20,6 @@ export function RenderPlayerDetails(){
                 <h2>Team : {currentPlayer.teamname}</h2>
                 <h2>Role : {currentPlayer.Role}</h2>
                 <p>{currentPlayer.description}</p>
-                <h2></h2>
             </div>
         </div>
     )
