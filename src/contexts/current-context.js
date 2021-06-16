@@ -5,8 +5,11 @@ export const CurrentDetailsContext = createContext();
 
 export function CurrentDetailsProvider({children}){
     const [currentTeam, setCurrentTeam] = useState([])
+    const [currentPlayer, setCurrentPlayer] = useState([])
+    const [currentVenue, setCurrentVenue]  = useState([])
     return(
-        <CurrentDetailsContext.Provider value={{currentTeam, setCurrentTeam}}>
+        <CurrentDetailsContext.Provider 
+        value={{currentTeam, setCurrentTeam,currentPlayer, setCurrentPlayer, currentVenue, setCurrentVenue }}>
             {children}
         </CurrentDetailsContext.Provider>
     );

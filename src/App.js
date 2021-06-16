@@ -4,8 +4,9 @@ import { Teams } from './components/teams/TeamsComponent';
 import {RenderTeamDetails} from './components/teams/TeamDetailsComponent' 
 import { ScoreTable } from './components/ScoreTableComponent';
 import { Players } from './components/players/PlayersComponent'
-//import { RenderPlayerDetails } from './components/players/PlayerDetailsComponent'
-import { Venues } from './components/VenuesComponent';
+import { RenderPlayerDetails } from './components/players/PlayerDetailsComponent'
+import { Venues } from './components/venues/VenuesComponent';
+import { RenderVenueDetails } from './components/venues/VenueDetailsComponent'
 import { Matches } from './components/MatchesComponent' ;
 import { Results } from './components/ResultsComponent';
 
@@ -64,6 +65,12 @@ function App() {
        }
        {
          tab === 'team_details' && <RenderTeamDetails />
+       }
+       {
+         tab === 'player_details' && <RenderPlayerDetails />
+       }
+       {
+         tab === 'venue_details' && <RenderVenueDetails />
        }
         
        </div>
