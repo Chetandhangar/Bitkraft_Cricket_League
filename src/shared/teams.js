@@ -18,5 +18,25 @@ export const TEAMS = [
         vice_captain : "M.Starc",
         image_url : '/assets/images/australia.webp',
         description:'The Australia mens national cricket team represents Australia in mens international cricket. As the joint oldest team in Test cricket history, playing in the first ever Test match in 1877,[9] the team also plays One-Day International (ODI) and Twenty20 International (T20I) cricket, participating in both the first ODI, against England in the 1970–71 season[10] and the first T20I, against New Zealand in the 2004–05 season,[11] winning both games.'
+    },
+    {
+        id : 3 ,
+        name : "Engalnd Men's Cricket Team",
+        short_name : "England",
+        squad : [],
+        captain : "E.Morgan",
+        vice_captain : "B.Stokes",
+        image_url: '/assets/images/england.webp',
+        description: ""
+
+    },
+    {
+        id : 4,
+        name : "New Zeland Men's Cricket Team",
+        short_name : "New Zeland",
+        squad : [],
+        captain : "K.Willimsion",
+        vice_captain : "T.Southee",
+        image_url : "/assets/images/new-zealand.webp"
     }
 ]
