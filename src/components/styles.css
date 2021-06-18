@@ -1,3 +1,23 @@
 .header{
-    margin: 3rem;
+    background-color: blueviolet;
+    margin-top: 0%;
 }
+
+
+.league-name{
+    color: white;
+    margin-left: 3rem;
+}
+
+.tabs{
+    display: flex;
+    flex-direction: row;
+}
+
+.tabs .btn-tab{
+    margin: 1.5rem;
+    border: none;
+    color: white;
+    background-color: blueviolet;
+}
+

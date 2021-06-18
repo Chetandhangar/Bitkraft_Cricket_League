@@ -1,6 +1,7 @@
 import { useBitkraft } from '../../contexts/bitkraft-context'
 import { useTab } from '../../contexts/tab-context';
 import { useCurrentDetails } from '../../contexts/current-context'
+
 export function Venues() {
 
   const { VENUES } = useBitkraft();

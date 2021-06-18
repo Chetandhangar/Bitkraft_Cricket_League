@@ -1,4 +1,5 @@
 import './App.css';
+import { Header } from './components/HeaderComponent';
 import { Countries } from './components/CountriesComponent';
 import { Teams } from './components/teams/TeamsComponent';
 import {RenderTeamDetails} from './components/teams/TeamDetailsComponent' 
@@ -17,28 +18,13 @@ import { useTab } from './contexts/tab-context';
 
 function App() {
 
-  const { tab, setTab } = useTab();
-  
-
-  function tabHandler(tab){
-    setTab(tab);
-  }
+  const { tab } = useTab();
+ 
 
   return (
     <div className="App">
-      <header className="header">
-        Give me one day i will make it more beatiful and everthing proper.
-        <h1 className="league-name">BitKraft Cricket League</h1>
-      <div className="tabs">
-       <button className="btn-tab" onClick={() => tabHandler("countries")}>Countries</button>
-       <button className="btn-tab" onClick={() => tabHandler("teams")}>Teams</button>
-       <button className="btn-tab" onClick={() => tabHandler("players")}> Players </button>
-       <button className="btn-tab" onClick={() => tabHandler("venues")}>Venues</button>
-       <button className="btn-tab" onClick={() => tabHandler("matches")}>Matches</button>
-       <button className="btn-tab" onClick={() => tabHandler("table")}>Score Table</button>
-       </div>
-       </header>
-       
+      <Header />
+       <br />
        <div className="components">
        {
          tab === "countries" && <Countries />
