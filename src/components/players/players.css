@@ -1,0 +1,17 @@
+/*.card{
+    display: flex;
+    
+}*/
+.card-player{
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    max-width: 200px;
+    border: solid black 1px;
+    padding: 1rem;
+    margin: 1rem;
+}
+
+.card-player > .player-card-text{
+    flex-grow: 1;
+}
